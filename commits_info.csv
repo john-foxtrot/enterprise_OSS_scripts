@@ -1,0 +1,356 @@
+Repo Id,Commit Id,Date,committer,Message
+36665193,2bc73dfa7a24173c10abe303ed5e68ef9894441a,2021-02-24T00:23:47Z,noreply@github.com,"Merge pull request #114 from square/develop/aardvark-4.0
+
+Merging in the development branch for Aardvark 4.0, CoreAardvark 3.0, AardvarkLoggingUI 1.0, and AardvarkMailUI 1.0"
+36665193,378e226fd7418ac0bdc894b12a14ad75239e8561,2021-02-22T03:22:10Z,entin@squareup.com,"Remove EmailAddress typealias (#111)
+
+This was only used in one place. I don't think it adds much in this case (since there's no real type safety with typealiases), so probably better to avoid using it."
+36665193,f8ab8ecf3ab9242d53d3dff7a9b1b76812932c8f,2021-02-22T03:22:10Z,entin@squareup.com,"Add some documentation (#110)
+
+* Add documentation for logging
+* Remove outdated iOS version specification from README
+* Clean up files and add missing headerdocs
+
+Co-authored-by: Dan Federman <dfed@me.com>"
+36665193,7e30b10eb86c60697477f0f23c12e849d3df8465,2021-02-22T03:22:10Z,entin@squareup.com,Add initializer for creating a log store with a file URL (#113)
+36665193,c1d1ef81b2eb0963317f79b26928b3f206421429,2021-02-22T03:22:10Z,entin@squareup.com,Add guide for migrating to Aardvark 4.0 (#102)
+36665193,d037f17b198ce8977f3c203ed6a1a702f37d8801,2021-02-22T03:22:10Z,entin@squareup.com,"Add convenience method for logging to the distributor from Swift (#109)
+
+This adds a convenience method for logging to a log distributor from Swift, to better support the use case of injecting the log distributor instead of using the global `log` function. The main advantage here over the Objective-C defined method is the default method parameters."
+36665193,9c58905ce778cc4ce2d8a52b3fbd13ff29d63770,2021-02-22T03:22:10Z,entin@squareup.com,Flush log observers after logging an uncaught exception (#99)
+36665193,93e92c07ea1cee548a0a92315234c72767b1ce7e,2021-02-22T03:22:10Z,entin@squareup.com,Fix localization warnings in project files (#108)
+36665193,f636a36ae7fd4d8df005dd4736cff6dcdbbc84ef,2021-02-22T03:22:10Z,entin@squareup.com,Import files in ARKEmailBugReporter from framework (#107)
+36665193,f48cbea58e9977a656e1dc42046cab97cab6034f,2021-02-22T03:22:10Z,entin@squareup.com,Move generation of attachments for log store from bug reporter to generator (#106)
+36665193,a282efa9ba156ea6fe5d56305fa1a79e94048b64,2021-02-22T03:22:10Z,entin@squareup.com,"Extract view hierarchy description attachment code into attachment generator (#100)
+
+This is a step towards pulling functionality out of `ARKEmailBugReporter` and into small utility classes, in order to make it easier to write a custom bug reporter.
+
+Co-authored-by: Dan Federman <dfed@me.com>"
+36665193,7ad59ab8c879b5438c66fae284d6303dfbe8bcd2,2021-02-22T03:22:09Z,entin@squareup.com,"Specify object type when reading from data archive (#101)
+
+This replaces usage of the deprecated NSKeyedUnarchiver method in favor of the replacement that specifies the type of object being unarchived."
+36665193,a67538dcd4beb9233c5cd238e4e7e0740bc77d98,2021-02-22T03:22:09Z,entin@squareup.com,"Fix mail compose window creation when using scene delegate (#105)
+
+In apps that use a scene delegate, windows must be initialized using the window scene, rather than being initialized with a frame."
+36665193,83b2742d173b3710a247377b009de304ffd12234,2021-02-22T03:22:09Z,entin@squareup.com,"Add persisted parameters to log message (#98)
+
+* Adds a persisted parameters field to the log message model
+* Adds convenience methods to log a message with parameters
+* Updates the default log formatter to include parameters in message description"
+36665193,2fbf76b86752d7097be6ffd5af31a16d77016543,2021-02-22T03:22:09Z,entin@squareup.com,"Remove file name, module, and created by from file headers
+
+The file name and module easily get out of date as we reorganize and rename files, and the created by line feels redundant since that information is already available in git."
+36665193,b0005d9ae72db6ddeed4e004ed1fec40224b286f,2021-02-22T03:22:09Z,entin@squareup.com,Add missing license headers
+36665193,e4a4f92fd77f3669c7fc01c84914c3ad498be39a,2021-02-22T03:22:09Z,entin@squareup.com,Add comments to document ARKLogExportOption (#94)
+36665193,4ca151e566db6653ec34dcdf952bce7b559a460c,2021-02-22T03:22:09Z,entin@squareup.com,"Bump deployment target to iOS 12 (#92)
+
+* Bump deployment target to iOS 12 and watchOS 4
+* Bump Swift version to 5.0
+* Adopt recommended project setting
+* Migrate to stringByAddingPercentEncodingWithAllowedCharacters
+* Migrate to UIAlertController
+* Add watchOS version requirement to README
+
+Co-authored-by: Dan Federman <dfed@me.com>
+Co-authored-by: Justin Steffen <jsteffen@squareup.com>"
+36665193,a3bb4607840fb76e68075146da1f5e2a9bc2e23d,2021-02-22T03:22:09Z,entin@squareup.com,"Decouple view hierarchy description from screenshot
+
+Previously, the view hierarchy description could only be attached to an email bug report if there was also a screenshot attached. This removes that coupling and allows them to be attached independently."
+36665193,bc6394e3d0a46d4db7b7b298d4f1730a44ab0b4c,2021-02-22T03:22:09Z,entin@squareup.com,Update README to reflect the separation of frameworks
+36665193,7edfdee6b61c8ab0b82f213701630aba5267b9e4,2021-02-22T03:22:09Z,entin@squareup.com,Update pod summaries for AardvarkLoggingUI and AardvarkMailUI
+36665193,c524e9cc5dc858390288fafa30246dfaf08107b8,2021-02-22T03:22:07Z,entin@squareup.com,Update version numbers in podspecs
+36665193,334519d545605c320a1419a6ac33704f1f6f6057,2021-02-22T03:21:35Z,entin@squareup.com,"Pull out email bug report functionality into AardvarkMailUI (#87)
+
+* Adds unit tests for `ARKEmailAttachment`.
+* Pulls out email bug report functionality into a new AardvarkMailUI module.
+* Renames `ARKEmailAttachment` to `ARKBugReportAttachment`, with a typealias to make transitioning between major versions easier.
+* Adds step for linting AardvarkMailUI to CI config.
+* Bumps expectation timeout for `test_appendArchiveOfObject_trimsCorruptedArchive`."
+36665193,56b86a488facfcb761fa86d26cd2587e463fc945,2021-02-22T03:21:35Z,entin@squareup.com,"Pull out log viewing functionality into AardvarkLoggingUI (#86)
+
+* Creates a new `AardvarkLoggingUI` framework.
+* Moves log viewing functionality from `Aardvark` to `AardvarkLoggingUI`.
+* Moves log formatting functionality from `Aardvark` to `CoreAardvark`.
+* Updates the CI config to build all three frameworks.
+* Reorganizes the file structure to better reflect the frameworks.
+* Reorganizes the Xcode project to follow the file structure.
+* Updates the tag names for Aardvark versions to include framework name.
+* Fixes the CI build for pod lint.
+* Bumps the expectation timeout for `test_appendArchiveOfObject_trimsArchive`."
+36665193,8274f4e273b0a1fff4a0d28bf3f2702d14a8cb43,2020-12-18T16:41:18Z,noreply@github.com,"Merge pull request #95 from connorcimowsky/master
+
+Fix touch handling when dismissing the email compose view"
+36665193,9c1bae53755cf1d208c0dc33b5cc21483faf137f,2020-12-18T15:55:43Z,connor@squareup.com,Bump Aardvark version to 3.4.5
+36665193,2496a4faa0817f4b64b0431781da18b0c98a67b3,2020-12-18T15:35:56Z,connor@squareup.com,"Fix touch handling when dismissing the email compose view
+
+This allows the previous key window to properly receive touch events
+after being made key and visible again."
+36665193,2c997c4984b19d5814f665dcd103c288657c4042,2020-12-18T01:42:15Z,connor@squareup.com,"Fix UIKit warning about manually adding subviews to the key window
+
+>Manually adding the rootViewController's view to the view hierarchy is no longer supported. Please allow UIWindow to add the rootViewController's view to the view hierarchy itself."
+36665193,3212862f94631cc7b1cb5b4be89b8b07df6358db,2020-10-19T07:23:19Z,noreply@github.com,"Use GitHub Actions for CI builds (#80)
+
+* Transitions from Travis CI to GitHub Actions for CI builds
+* Updates the sample app to build using Xcode 11
+* Disables `test_logDistribution_performance`, since it has been observed to be flaky on CI builds
+* Updates the CocoaPods dependency to 1.9"
+36665193,70a6c0378ada87be587ff9c747caaf5a3dc58731,2020-08-19T01:10:27Z,noreply@github.com,"Merge pull request #81 from zadr/framework-search-paths
+
+use framework search path in Aardvark to pull in CoreAardvark headers"
+36665193,d767b6ccf4350a908c1a8a039b37c5825672ae85,2020-08-19T00:34:13Z,zacharydrayer@gmail.com,use framework search path in Aardvark to pull in CoreAardvark headers
+36665193,38b0c6744371f190bb6a530d6b169ca0fce8966d,2020-07-24T21:07:45Z,noreply@github.com,"Merge pull request #46 from natan/system-version-with-build
+
+Include system build version in email body"
+36665193,b990017c9f9056a40905f6c8ec79cc754ce3d56c,2020-07-24T16:02:16Z,nathan.spindel@anchorlabs.com,Use -[NSProcessInfo operatingSystemVersionString] instead of -[UIDevice systemVersion] to surface OS build number
+36665193,a5b18513f213972af889f381f8306ff54ae5cf5b,2020-02-22T01:45:33Z,noreply@github.com,"Merge pull request #79 from square/dfed--bump-cp
+
+Bump Cocoapods from 1.5 to 1.8"
+36665193,50d663a20b3bada1cd95ec72a0f0af7af2571833,2020-02-22T01:35:05Z,dan.federman@airbnb.com,Bump Cocoapods from 1.5 to 1.8
+36665193,430193f3c443447d0e62cacc03e401aff0646db2,2020-02-22T01:06:09Z,noreply@github.com,"Merge pull request #78 from gizmosachin/master
+
+Use system text color in ARKLogTableViewController (square#77)"
+36665193,13a8a77dc94bb1804d4d370f4935ea3d529d9d9d,2020-02-22T00:30:16Z,sachin@squareup.com,"Use system text color in ARKLogTableViewController (square#77)
+
+Previously, this explicitly set the text color to black, which doesn't work correctly in dark mode. Now it assigns the text color to `nil`, which [causes it to be reset to the default value](https://developer.apple.com/documentation/uikit/uilabel/1620531-textcolor) (the system text color)."
+36665193,b633c7c1dcf8ffcc344ceeb3dacc505c58bcd1d5,2019-03-27T23:14:06Z,noreply@github.com,"Fix search behavior in log table view (#72)
+
+Previously, the search behavior wasn't working correctly when the query got less specific (i.e. you hit backspace), since it was filtering the already filtered list. This keeps that optimization when the query is getting more specific, but searches all log messages when the query becomes less specific."
+36665193,38919e38472efe5ece81ecf8714413d54322ca9e,2018-11-07T01:37:30Z,nckentn@gmail.com,"Support Swift 4.2, 4.0, and 3.0 (#71)
+
+* Make sure addDefaultBugReportingGestureWithEmailBugReporter is visible to objc
+
+* Clean up @objc and @nonobjc formatting
+
+* Explicitly support Swift 4.2, 4.0, and 3.0
+
+* Update Cocoapods and adopt swift_version key in podspecs. Declare support for Swift 4.0.
+
+* Bump podspecs
+
+Co-Authored-By: dfed <dfed@me.com>"
+36665193,3f597c8dce1d343c6600bc142d8ef77d03724fad,2018-10-25T19:57:43Z,noreply@github.com,"Merge pull request #69 from square/dfed--cocoadocs-to-cocoapods
+
+docs -> pods"
+36665193,3af0d34cb9e22d12c543f4ea81cf05874a595b8a,2018-10-23T18:41:22Z,dan.federman@airbnb.com,docs -> pods
+36665193,ae05c36b0dc1e9a11edbce1d8ca1bcee556d4404,2018-10-02T01:28:36Z,noreply@github.com,Log uncaught exceptions (#53)
+36665193,f65d75e533d1c4c7848c784e73d11c461ab13be1,2018-06-25T19:25:46Z,noreply@github.com,"Add delegate for implementing custom prompting behavior (#65)
+
+Add delegate for implementing custom prompting behavior via the `ARKEmailBugReporterPromptingDelegate` protocol.
+
+Also fixes a bug where the email dialog isn't shown when no log messages are included in the report. Previously, this could happen when the log stores are empty or the `emailAttachmentAdditionsDelegate` returns false for all log stores. The custom prompt adds another case of this bug by offering users the chance to filter out all log store."
+36665193,94481eab33504d283fd95f77a656cd393dc1c9da,2018-04-10T20:57:30Z,nckentn@gmail.com,Bump version: 3.3.2 (#64)
+36665193,fee520473b4ed4bc1252ccf783a5785be256fd3e,2018-04-10T20:38:30Z,gmoney@gitpushgitpaid.com,"Don't animate alert presentation
+
+There seems to be a bug in UIKit around animating the presentation of the
+alert controller that can result in a crash. Given that this library is for
+debug purposes, it seems reasonable to avoid this crash entirely and just
+disable the animation here."
+36665193,e25e8fe361b0233849785aed3a7ea0133bf4ab8d,2018-04-02T23:54:15Z,nckentn@gmail.com,"Guard against iOS 9.0+ API usage (#62)
+
+* Use only pre-iOS 9 compatible API calls
+* Bump Aardvark pod version to 3.3.1"
+36665193,e1554bf2f137a2804434c7315880c678310e2a8d,2018-01-19T21:28:29Z,noreply@github.com,"Add email attachment delegate (#56)
+
+* Add delegate for providing additional email attachments and filtering log stores to include in bug reports
+* Bump Aardvark pod version to 3.3.0"
+36665193,2d5fb93b19fc2a0fd99f6e912fdee777bd384008,2018-01-11T00:32:25Z,noreply@github.com,"Merge pull request #57 from square/natan/sample-link
+
+Update link to SampleViewController in README.md"
+36665193,86a76e459ad13627b4046986028f4b19224550d1,2018-01-10T23:55:07Z,nathans@gmail.com,Update link to SampleViewController in README.md
+36665193,22852a7ff46dffcfdc4847450129144b4784caa7,2018-01-09T04:10:22Z,noreply@github.com,"Include view hierarchy description with screenshots in bug reports (#54)
+
+* Bumps Aardvark pod version to 3.2.0"
+36665193,ac088a1169d9623add98d64ad671e36818787b31,2017-10-04T17:55:47Z,nathanspindel@squareup.com,Bump version in Aardvark.podspec to 3.1.2
+36665193,4fe7623e3b0d26083ed4f0b2ba6742cb81b6f815,2017-10-04T17:46:35Z,noreply@github.com,"Merge pull request #52 from natan/natan/presented-view-controller
+
+Use the topmost presented view controller for displaying bug title capture alert"
+36665193,bf9158832cfa11f3afb575b3385d63851ecc5409,2017-10-03T23:55:59Z,nathanspindel@squareup.com,Use the topmost presented view controller for displaying bug title capture alert
+36665193,0843146613bd0027722d140f1277c860defb9f2a,2017-09-25T19:37:56Z,dan.federman@airbnb.com,Bump podspec
+36665193,76e1fda9a3444e9f24d896d1cdbd975cae37bc6c,2017-09-25T18:33:18Z,noreply@github.com,"Merge pull request #49 from square/dfed/xcode_9
+
+Adopt recommended Xcode project changes"
+36665193,85e20c0ea620850d2d319081ca44e37919f3fe2a,2017-09-23T04:29:44Z,dan.federman@airbnb.com,Adopt recommended Xcode project changes
+36665193,85dbfa5bea1b886c2f2260de5eea22644167a473,2017-09-23T03:45:55Z,noreply@github.com,"Merge pull request #48 from manolosavi/master
+
+Fixed `CLANG_WARN_STRICT_PROTOTYPES` warnings in preparation for Xcode 9."
+36665193,8b45b76483a8c807fb53a33114ba9b6b941d25e9,2017-09-23T03:40:49Z,manolosavi@me.com,Fixed `CLANG_WARN_STRICT_PROTOTYPES` warnings in preparation for Xcode 9.
+36665193,d34a65467bb08f4bc1dd102c8e640cd4eb74cc09,2017-07-14T17:16:51Z,jmartin@squareup.com,Style nits
+36665193,c4bb71f63d6afdda06abde4a041a6ac499a6ba93,2017-07-14T17:14:38Z,noreply@github.com,"Merge pull request #45 from zerofinancial/ekimia/xcode9
+
+address nullability warning."
+36665193,66eb8790b77a0c85b74f56ebb35d445259629591,2017-07-13T05:20:22Z,evan@zerofinancial.com,address nullability warning.
+36665193,38cb6f85ac85822e0f956b4c936af9fa7bf4d2f6,2017-04-18T19:42:14Z,noreply@github.com,"Merge pull request #44 from bryant1410/master
+
+Fix broken headings in Markdown files"
+36665193,eab9cf71b5326f07c871f4f20ef2f97af02e6fd5,2017-04-16T19:50:44Z,santi.1410@hotmail.com,Fix broken Markdown headings
+36665193,492fcb69d436cdb42fe0902f61e7709b421a2c4c,2017-01-12T14:17:23Z,noreply@github.com,"Merge pull request #41 from square/shawnwelch/add-watch-3.0
+
+Add support for Apple Watch in CoreAardvark"
+36665193,42c8e2145f4afaa7a281aaa323c5dc5f3b5348bb,2017-01-11T20:27:35Z,swelch@squareup.com,Code Review: Federman
+36665193,22ca8f373095a0efb093028b1f2d3ca0bc243167,2017-01-11T20:15:24Z,swelch@squareup.com,Wrap termination logic to exclude watchos and create public method to do the same task
+36665193,8a7c00afdd909cf6ee3ca094a29ce4a38e986a7a,2017-01-11T18:08:51Z,swelch@squareup.com,Bump pod spec
+36665193,f95c754d06c4be7e7bd82e7fd8db468e099f1797,2017-01-11T17:26:04Z,swelch@squareup.com,Add supportd platforms to project settings
+36665193,551f076534d254950b4ee87a3aefbc4ba9a8da7d,2017-01-11T17:17:25Z,swelch@squareup.com,Add platform watchos to CoreAardvark podspec
+36665193,ace602d0199d1aa8441a5faad4f002b90aa7583f,2016-12-13T20:27:53Z,noreply@github.com,"Merge pull request #40 from square/federman/inbox
+
+Enable Aardvark to create bug reports with Inbox"
+36665193,73a96aa68c859add853be360bf7bbb1049477c75,2016-12-13T18:43:50Z,federman@squareup.com,Enable Aardvark to create bug reports with Inbox
+36665193,35908618e29b6c0ef68ab48fe1d0021721edccc6,2016-09-23T04:40:13Z,noreply@github.com,"Merge pull request #36 from square/federman/swift_support_2.0
+
+[3.0] Swift!"
+36665193,2f7829d688d58ae4d4d800be94c18e2dfa45e044,2016-09-22T23:43:23Z,federman@squareup.com,Delete flakey test that only tests built-in iOS SDK behavior.
+36665193,d4a3b2213b86bd0f5223cf3cbd5ef290320f24df,2016-09-22T18:39:32Z,federman@squareup.com,Share AardvarkSample.xcscheme
+36665193,5157e616da60c596181d8f809d175dc8ac5758e9,2016-09-22T18:15:29Z,federman@squareup.com,Fix flakey tests by ensuring a clean log store on setup
+36665193,b84c84e0c2fae6630722914a8e0b02d28dc8b1ac,2016-09-22T17:36:46Z,federman@squareup.com,Do not hard fail when iOS prevents us from querying if mailto works
+36665193,06f9fb58527804b615c3c8eb4cf57de02257e12e,2016-09-22T17:12:24Z,federman@squareup.com,Remove iOS 6 and 7 support. Remove static library targets. Use explicit nullability keywords. Xcode 8 support. Add Swift 3 API.
+36665193,077365621e5f8dc076ffe18007dde90980656c42,2016-08-29T05:13:58Z,noreply@github.com,"Merge pull request #39 from mortonfox/patch-1
+
+Fix some links to internal files"
+36665193,f89606bb4cc6abb461405fae592261f3fa7097a5,2016-08-29T04:30:54Z,noreply@github.com,Fix some links to internal files
+36665193,d97e0cafbb3da2819a005d6ffeca482eb6485d07,2016-07-28T01:17:47Z,noreply@github.com,"Merge pull request #38 from square/federman/better_extension_support
+
+[2.0] Use two podspecs instead of one"
+36665193,a5959fe5fedd4b917aa19c54ee807b7957e55ed7,2016-07-28T01:04:53Z,federman@squareup.com,pod repo update before linting
+36665193,3657548c46e2f4514ecb6a63eaf1f7ac9c5bf344,2016-07-28T00:12:12Z,federman@squareup.com,Use proper Cocoapods version in CI
+36665193,e0a7ba773e1931a0ae7d3bcf5ab29c8b28c385bb,2016-07-28T00:01:32Z,federman@squareup.com,Use _Nonnull and _Nullable
+36665193,7e98c5b6d1c01286ceb3bc4ed5e12de3c6533b5e,2016-07-27T23:58:28Z,federman@squareup.com,Drop support for Xcode 6
+36665193,856e711901d95d5160d1c19d13c647da2d0ef823,2016-07-27T23:47:45Z,federman@squareup.com,2.0. Separate out CoreAardvark and Aardvark. Use different podspecs for each target.
+36665193,4ee6e17d1c941ed606a33f61c868fd1e7efcc2cd,2016-07-27T02:45:26Z,federman@squareup.com,Fix podspec
+36665193,cfadd39906514f11c9354eac40920655e5414072,2016-07-26T20:06:26Z,noreply@github.com,"Merge pull request #37 from square/federman/aardvark_core
+
+Expose extension-compatible CoreAardvark"
+36665193,b97a0292b311d1dbe011d4f7b7c335aa866cd881,2016-07-26T05:19:09Z,federman@squareup.com,Expose extension-compatible CoreAardvark
+36665193,a92b3d87f016d8e7b89e05012e30eef0be5a25d4,2016-03-22T23:33:32Z,robert@robertgilliam.org,"Merge pull request #34 from square/rhg/ark-log-message-create-with-date
+
+Allow an ARKLogMessage to be created with an arbitrary creationDate. …"
+36665193,f1e7dbc653f52547c3783492c9f380c2891a7ac6,2016-03-22T23:00:09Z,rhg@squareup.com,Allow an ARKLogMessage to be created with an arbitrary creationDate. Use designated initializers.
+36665193,a4a9ab59c9342e534ff4205a2ef005c4e4c94293,2016-01-15T05:32:41Z,federman@squareup.com,Bump podspec to 1.4.0
+36665193,be1a2252574ce3310be9d075c6fa0414a3fcd40a,2016-01-15T05:32:04Z,dfed@users.noreply.github.com,"Merge pull request #30 from natan/natan/29
+
+Fixes #29 Screenshot should include all windows, not just the key window"
+36665193,1a7a2dfd4d34be5b27dc502b7cdcb33845ec19aa,2016-01-15T05:07:09Z,dfed@users.noreply.github.com,"Merge pull request #32 from square/shawnwelch/add-log-search
+
+Add search to filter logs on log table view controller"
+36665193,831860f60ca43ddd83fbeeb395de689b0d129cd4,2016-01-15T04:51:41Z,swelch@squareup.com,Code Review pass 2
+36665193,f355a6de79d63448e462ff753483e5d5888d2b0b,2016-01-15T04:07:19Z,federman@squareup.com,Don't re-capture the key window
+36665193,7dcb17b2df40b7fa3f4de8615049fef8bea33cf9,2016-01-15T04:02:52Z,federman@squareup.com,Keep old screenshot behavior on iOS 6. Get full window screenshots on iOS 7 and later
+36665193,98ed0055354504cbfa55dcc581c57c87b7841809,2016-01-15T04:00:27Z,swelch@squareup.com,Code Review
+36665193,f719c15aefe43d86c264cfbb57bace8fd4d43d23,2016-01-15T00:48:28Z,swelch@squareup.com,Add UISearchController to log table view controller and filter logs based on user input
+36665193,0f2b0270fc398f0c33278d50fcc598258fcc0a27,2016-01-14T19:27:09Z,nathan@squareup.com,"Fixes #29 Screenshot should include all windows, not just the key window"
+36665193,8a884a730f38ef8a4704b5d156fb98733d7da9c3,2015-12-15T05:03:41Z,dfed@users.noreply.github.com,"Merge pull request #27 from square/federman/contributing
+
+Add Contributing.md"
+36665193,ac0ebe55431cb23addf8399b9cff52e40b0748a2,2015-12-14T19:46:34Z,federman@squareup.com,Add Contributing.md
+36665193,19e5a5eb6b841038d46413c4bf208d1f31834f42,2015-12-11T20:53:50Z,federman@squareup.com,"Revert ""Add Gemfile.lock""
+
+This reverts commit e6f14f4e6cce7395881a3c92dce0e6e2868a7cff."
+36665193,e6f14f4e6cce7395881a3c92dce0e6e2868a7cff,2015-12-11T20:48:00Z,federman@squareup.com,Add Gemfile.lock
+36665193,8cc6c910774cba9ef0a2d843e4e056813ab7e0f3,2015-12-11T20:40:17Z,federman@squareup.com,Bump cocoapod version to 0.39.0
+36665193,aa6b5e61deb55499774266bbbcc0269d118bcf7e,2015-12-11T20:32:16Z,federman@squareup.com,Bump podspec to 1.3.2
+36665193,c235a7420eadf97556b34fbb6068928a3b78b5f9,2015-12-11T20:31:37Z,dfed@users.noreply.github.com,"Merge pull request #26 from natan/natan/CASHI-3302
+
+Can't file JIRA with receipt open"
+36665193,57b2470f58b30b4611781a16e7afee7d872f324c,2015-12-11T19:42:57Z,nathan@squareup.com,"Can't file JIRA with receipt open
+
+https://jira.corp.squareup.com/browse/CASHI-3302"
+36665193,e06d67489ddb89571e97b5c23c743e5d5a366c25,2015-10-26T23:59:55Z,dfed@users.noreply.github.com,"Merge pull request #25 from square/federman/fix_imports
+
+Remove private imports from umbrella file"
+36665193,05dd29d51d512e47bb0c7d2b61075eeca504524d,2015-10-26T23:54:52Z,federman@squareup.com,Bump podspec to 1.3.1
+36665193,d7908901c26ecd38717a05484ef4c8c27df3cc9c,2015-10-26T23:54:31Z,federman@squareup.com,Remove private imports from umbrella file
+36665193,cbce88a7d5db69ec7b5891c6646eb74e8fce1344,2015-10-26T21:15:04Z,dfed@users.noreply.github.com,"Merge pull request #24 from square/federman/nits_and_polish
+
+Nits, polish, and a pod bump"
+36665193,710e88b3832a6bed516034e61acd3d05a9bc9002,2015-10-26T21:06:39Z,federman@squareup.com,Bump podspec to 1.3 since Aardvark.h is now an umbrella header
+36665193,539e8b50e821684cf2b6e51584d087cd52b81b31,2015-10-26T21:06:39Z,federman@squareup.com,Update README to include Carthage support
+36665193,b996c67d7fabd44f24e8b569e585f5f5616655f2,2015-10-26T19:42:39Z,federman@squareup.com,Fixup imports
+36665193,81106c92c694431cc9dac8863102c3ef514b4e78,2015-10-26T19:40:03Z,federman@squareup.com,Perform Xcode project changes recommended by Xcode 7.1
+36665193,7ffcd81ff0a6a0675d916593fd73d2b4b14654e8,2015-10-26T19:33:11Z,dfed@users.noreply.github.com,"Merge pull request #23 from postmates/frameworkSupportAttemptTwo
+
+add a new dynamic framework target for iOS 8+"
+36665193,710797c660632f8dae8c6aa0eca29346de555fe8,2015-10-26T19:25:31Z,evan.kimia@icloud.com,remove the unneeded clean
+36665193,92d2c13c7d19c9b99b8844ee9c87d38f567a4023,2015-10-26T17:58:14Z,evan.kimia@icloud.com,dont import AKRLogObserver twice
+36665193,a9b2044325a088431d298fa5376f0a61043abc24,2015-10-24T00:03:17Z,evan.kimia@icloud.com,dont declare ARKLogObserver again
+36665193,7e82b69a2d81b1a39418c3b48232eca7ac1dec3f,2015-10-23T23:53:26Z,evan.kimia@icloud.com,clean before building the framework
+36665193,576865e9160a8172af1442e500b289951a5b7bc7,2015-10-23T23:45:35Z,evan.kimia@icloud.com,address style nits
+36665193,8dd1cfbfff8330a9808c1985e84d76d7e352ced1,2015-10-23T23:39:13Z,evan.kimia@icloud.com,"style nits, set build active architecture only in debug"
+36665193,fcc00671800534cf974baed610e60a4aa9deac38,2015-10-23T23:33:59Z,evan.kimia@icloud.com,Added ARKLogging
+36665193,45ed0a72d2aaa9169c4666ca527f7c82a5863a0e,2015-10-23T23:17:50Z,evan.kimia@icloud.com,added ARKLogTypes.h
+36665193,2f5f5009db99fdb590509aa8b3a8637dba38857b,2015-10-23T22:53:02Z,evan.kimia@icloud.com,style tweaks
+36665193,a1302daf8242ce813ec8d29a390e94c3ed4df900,2015-10-23T21:26:31Z,evan.kimia@icloud.com,"use the release configuration to build, not Debug"
+36665193,f8983996a015f04afe2f543a31118688a0268173,2015-10-23T21:13:55Z,evan.kimia@icloud.com,alphabetize the import list
+36665193,f9e578121288a99ad434a557ccd90ec4b95cb186,2015-10-23T21:10:40Z,evan.kimia@icloud.com,"alphabetically list imports, move ARKLogTypeDefault and the OBJC_EXTERNs to the top of the file"
+36665193,3627135f4409e3e108c9bfb5cc095c0d12400f83,2015-10-23T20:55:23Z,evan.kimia@icloud.com,would be good to also use Aarvardk.xcodeproj instead of Valet.xcodeproj....
+36665193,96f422f72c8671b9f5dc8fad9caa9ace9f22fea8,2015-10-23T20:50:17Z,evan.kimia@icloud.com,rename scheme name in travis.yml
+36665193,c31fcc959e070a909e3b04ed6154f1172c83efac,2015-10-23T20:48:58Z,evan.kimia@icloud.com,add a new dynamic framework target for iOS 8+
+36665193,be8189d37807e5c14f1bc4dd0cac64a0b1f7dd27,2015-09-24T18:13:17Z,federman@squareup.com,Bump pod to 1.2.2
+36665193,040e4da41b7ce70558ac4f42cee40a95d2cc7274,2015-09-24T18:08:05Z,dfed@users.noreply.github.com,"Merge pull request #21 from square/federman/logScreenshot_crashfix
+
+Prevent rendering screenshot from causing a crash on iOS 9"
+36665193,061b7f81a84acde941418b427173771e658fb73b,2015-09-24T15:15:03Z,federman@apple.com,Prevent rendering screenshot from causing a crash on iOS 9
+36665193,bbb951f4ade4b04aa89c8e2e3763520a15e69e7a,2015-09-22T19:12:59Z,federman@squareup.com,Bump pod to 1.2.1
+36665193,5e751641eca03c2153c928066aaf809516d75c75,2015-09-22T19:12:11Z,dfed@users.noreply.github.com,"Merge pull request #19 from tinyspeck/master
+
+Allows skipping screenshot capture when triggering the creation"
+36665193,ddcaf700a67d27d9e21b314089e71eb9a0e0a7e0,2015-09-22T18:50:01Z,iromero@REMOTE-M-IROMERO01.local,Adds localised strings' descriptions
+36665193,9a90d3f252f0fa316965b6ac858668f5c2f72174,2015-09-22T18:40:39Z,iromero@REMOTE-M-IROMERO01.local,Renames methods and properties to make the owners happy 😎
+36665193,c7dd86bc73981cd457b3264e15a80a6d6fb81a51,2015-09-21T21:35:28Z,iromero@REMOTE-M-IROMERO01.local,Removes `_Nonnull` causing CI to fail
+36665193,b6ef93f777d61f59f256d440b564c5963063ba49,2015-09-21T21:34:50Z,iromero@REMOTE-M-IROMERO01.local,Gets rid of the `#ifdef __IPHONE_8_0`
+36665193,e32e6990b108c89f395f7037ffdd133b2d5d7dea,2015-09-21T21:11:24Z,iromero@REMOTE-M-IROMERO01.local,Tweaks based on feedback
+36665193,7d9a0b718ed4d4c21e8dc6d0116e73e95062fec5,2015-09-21T21:06:52Z,iromero@REMOTE-M-IROMERO01.local,Makes sure the code compiles pre-iOS8 SDK
+36665193,d55027d76a01c5663f7d841352d3929e7860cfb7,2015-09-21T20:45:35Z,iromero@REMOTE-M-IROMERO01.local,Uses constants for strings
+36665193,55859ed8bd1062eab6b2714cab95f7dbd891d741,2015-09-21T20:40:22Z,iromero@REMOTE-M-IROMERO01.local,Fixes typo
+36665193,6dd83b01e2643f4e9caf6c96eb9f546d645e408e,2015-09-21T20:28:48Z,iromero@REMOTE-M-IROMERO01.local,Uses UIAlertController instead of UIAlertView if possible
+36665193,d3d23dd0369b6a8f6a5014c5e53c215be133ba8c,2015-09-21T20:11:14Z,iromero@REMOTE-M-IROMERO01.local,Simplifies the implementation
+36665193,4072f288497dc1fbf5a9cb96df4eefdf090f6274,2015-09-21T19:57:47Z,iromero@REMOTE-M-IROMERO01.local,Allows skipping screenshot capture when triggering the creation of a bug report.
+36665193,4284e7f91595f6b6c9b40bfc25d4b4ba589ea875,2015-09-03T18:11:24Z,dfed@users.noreply.github.com,"Merge pull request #16 from square/federman/bug_report_additions
+
+Add a mechanism to specify dynamic key-value pairs in the prefill email body of a bug report"
+36665193,714abd3f7932a6bf4a55cfd6ae58c60c9a869d54,2015-09-03T17:57:07Z,federman@squareup.com,Utilize email body additions when attachments are unavailable
+36665193,57bb4b511133e9088fd121d7cdfadb731b2f230f,2015-09-03T17:39:15Z,federman@squareup.com,Email body whitespace fixes
+36665193,abe56f100c53ecf36b50517420597ccc1929347e,2015-09-03T17:26:43Z,federman@squareup.com,Distributing all pending logs should have higher QOS
+36665193,9c77f8272aae0461a88bd5afe6f2e40571dd5c7d,2015-09-03T17:26:43Z,federman@squareup.com,Add a mechanism to specify dynamic key-value pairs in the prefill email body of a bug report
+36665193,4c8fedf88ab11e51e8508ebb9b39570624df8aeb,2015-09-03T17:08:01Z,robert@robertgilliam.org,"Merge pull request #18 from square/rhg/ri-11529--fix-ipad-activity-sheet-crash-ios-7
+
+[RI-11529] Fix iPad activity sheet crash on iOS 7."
+36665193,27a6f5aa8d1ccec9d8d0f013a14f6a078be137f9,2015-09-02T00:06:32Z,rhg@squareup.com,[RI-11529] Fix iPad activity sheet crash on iOS 7.
+36665193,9245e1a7c9a149baf7c1be4786a31995e7c76661,2015-08-24T04:14:39Z,robert@robertgilliam.org,"Merge pull request #15 from square/rhg/ri-11328--fix-crash-when-trying-to-email-logs-using-ipad
+
+[RI-11328] Fix crash when displaying action menu on iPad."
+36665193,a1455c0bb2f93813a35485931493e054d05f994f,2015-08-23T21:46:46Z,federman@squareup.com,Xcode 7 fixes
+36665193,bc0885dd737b89de108ae9db93f3490d3b3ee377,2015-08-23T21:46:46Z,federman@squareup.com,Make defaultLogStore nonnull so we can pass it into nonnull parameters
+36665193,cca82b93f3d98bd6bc33f533301ea7fb596c5cfb,2015-08-23T21:46:46Z,federman@squareup.com,Make ARKLogStore declare designated initializer and unavailable initializers in header
+36665193,b23adf0a83ba684148341c18d14e5ef831005b2e,2015-08-23T21:36:54Z,federman@squareup.com,Remove unused code
+36665193,eb699eefa3f251f832f274c137c4e876d4569af0,2015-08-23T17:55:08Z,rhg@squareup.com,Feedback from federman.
+36665193,5b1570ae5c13f384d36642a9e1f785fd9a552258,2015-08-22T20:41:39Z,rhg@squareup.com,[RI-11328] Fix crash when displaying action menu on iPad. Improve initializer correctness.
+36665193,fd61728f5732e705cf31322d7857a62afd98bbe6,2015-08-21T02:31:22Z,dfed@users.noreply.github.com,"Merge pull request #14 from square/federman/more_accurate_performance_test
+
+More accurate ARKDataArchive performance test"
+36665193,aca2e98a387a3b58e6d64c11f2cafc7502a347a0,2015-08-05T21:33:17Z,dfed@users.noreply.github.com,"Merge pull request #12 from square/federman/ios_9_funtimes
+
+Work around iOS 9 not posting UIWindowDid*KeyNotification"
+36665193,6f6a19bde98654015dfdd5e0aec6a2b596f08915,2015-08-05T21:28:09Z,federman@squareup.com,Bump pod version to 1.1.1
+36665193,568ffbb7ee9c26a2295d5a2d351b9e4e3cc8c985,2015-08-05T21:27:59Z,federman@squareup.com,Work around issue where iOS 9 does not call UIWindowDidBecomeKeyNotification is not called after mail compose sheet is dismissed
+36665193,6e0f3355c6ec3e1115e4d3b534e8145c9af1d50d,2015-08-05T21:27:59Z,federman@squareup.com,Stop linking Crashlytics
+36665193,4a47c2435351edbdb87dc8cc9b60c7d402b8d878,2015-08-05T20:02:10Z,federman@squareup.com,More accurate ARKDataArchive performance test
+36665193,159dd82bc6c86e996e68361f6288db07265a2a7c,2015-08-05T19:55:10Z,dfed@users.noreply.github.com,"Merge pull request #13 from square/federman/do_not_use_default_distributor_in_tests_for_reliability
+
+Do not use [ARKLogDistributor defaultDistributor] in tests for better testing reliability in a parallel environment"
+36665193,0b4a832435cd88af9cbe4964948ddb7170120d4d,2015-08-05T19:30:37Z,federman@squareup.com,Do not use [ARKLogDistributor defaultDistributor] in tests for better testing reliability. Ensure that the performance test waits for logs to be fully distributed.
+36665193,addf3f256369cd60f0b14f9318b8b50547608e33,2015-08-05T17:46:32Z,k@squareup.com,"Merge pull request #10 from square/federman/expose_unavailable_initializer
+
+Expose unavailable initializer in header"
+36665193,a9853328a9b12ac12cbc5a9f871ed69fbc8e8977,2015-08-02T22:09:59Z,federman@squareup.com,Expose unavailable initializer in header
+36665193,267c76ec32f699e2a2658d83af0aed6a6bccf2e2,2015-07-23T00:27:26Z,dfed@users.noreply.github.com,"Merge pull request #7 from square/federman/nullable_xcode64_support
+
+Add support for nullable and nonnull for better Swift interoperability"
+36665193,de1c14529c966d9b158470f9f3784946bc393909,2015-07-23T00:09:36Z,kenwigginton@squareup.com,Fix iOS 9 build
+36665193,e5a87cf6f745d6497288520c3e61487f5947adc8,2015-07-06T15:21:04Z,federman@squareup.com,Update minimum xcode version
+36665193,39374e3dfef9606b162d32e9cf89c36685d80bb9,2015-07-02T22:10:43Z,federman@squareup.com,CI should validate the pod spec
+36665193,836114e3b1731e80d6478d16c30c19f72e0486ff,2015-07-02T17:15:26Z,federman@squareup.com,Add support for nullable and nonnull for better Swift interoperability
+36665193,08e2c59fda85c6e26db2ea4867a713a4230b7b14,2015-07-01T23:47:57Z,git+federman+mtauraso@squareup.com,Use proper license name in the podspec
+36665193,9d058cc49e88a5871510f11c887986a3e3941955,2015-07-01T19:34:51Z,robert@robertgilliam.org,"Merge pull request #4 from square/rhg/add-log-stores-convenience-method
+
+Add logStores method and various other improvements"
+36665193,6268c13d8c22191074bd50351e0f818d8532d6c8,2015-07-01T17:46:51Z,rhg@squareup.com,Bump podspec version to 1.0.2.
+36665193,5850a2258e290db974514c88f99e48b8e78895c1,2015-07-01T17:45:19Z,rhg@squareup.com,Address feedback from Dan.
